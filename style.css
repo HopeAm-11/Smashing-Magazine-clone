@@ -122,7 +122,6 @@ button {
     /*Box model*/
     height: 109px;
     width: 100%;
-    border: 1px solid red;
     /*Typographic*/
     /*Visual*/
     background-color: var(--darkgrey);
@@ -147,6 +146,9 @@ button {
     align-items: center;
     width: 60rem;
     height: 73px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+
 }
 
 .main_item {
@@ -154,6 +156,7 @@ button {
     height: 54px;
     background-color: var(--extradark);
     color: black;
+
 }
 
 .more_link {
@@ -184,6 +187,8 @@ button {
     display: flex;
     height: 74px;
     background-color: var(--midgrey);
+
+
 }
 
 .sub_menu {
@@ -197,6 +202,8 @@ button {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
+
+
 }
 
 .sub_item {
@@ -204,6 +211,7 @@ button {
     height: 46px;
     background-color: var(--darkgrey);
     border-radius: 10px;
+
 }
 
 .jump_item {
@@ -214,31 +222,20 @@ button {
 
 /*Main-article*/
 main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 100px repeat(2, 1fr) 100px;
+    grid-gap: 10px;
+    justify-items: center;
     border: 1px solid pink;
     margin-top: 10px;
+
 }
 
 .art_wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
+
     border: 1px solid blue;
-    height: 969px;
     width: 970px;
-    word-wrap: break-word;
+    grid-column: 2/3;
 }
 
 .art {
@@ -248,22 +245,23 @@ main {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    border: 1px solid rgb(164, 255, 60);
     height: 138px;
+    border: 1px solid rgb(164, 255, 60);
+    margin-bottom: 20px;
     background-color: var(--midgrey);
 
 }
 
+.margin-0 {
+    margin-bottom: 0px;
+}
+
 .main_articale {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
     height: 424px;
     width: 100%;
     border: 1px solid orange;
@@ -298,6 +296,7 @@ main {
     height: 177px;
     margin-right: 20px;
     border: 1px solid rgb(73, 67, 67);
+    border-radius: 10px;
     background-color: var(--extraextradark);
 
 
@@ -307,6 +306,7 @@ main {
     width: 118px;
     border: 1px solid rgb(73, 67, 67);
     background-color: var(--extradark);
+    border-radius: 10px;
 
 }
 
