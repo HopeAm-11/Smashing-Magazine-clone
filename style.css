@@ -46,6 +46,12 @@ body {
     text-rendering: optimizeSpeed;
 }
 
+/*@media*/
+
+
+
+
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
     -webkit-text-decoration-skip: ink;
@@ -537,4 +543,15 @@ footer {
 
 .heading_sub {
     font-size: 44px;
+}
+
+@media screen and (max-width: 400px)
+
+/*Hide an element when the browser's width is 400px wide or less:*/
+    {
+    .sub_nav {
+        display: none;
+    }
+
+
 }
